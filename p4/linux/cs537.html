@@ -1,0 +1,215 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>CS-537: Intro to Operating Systems</title> 
+</head> 
+
+<body link="#00aacc" text="black" vlink="#00aacc" alink="black" bgcolor="white">
+
+<center>
+<center>
+<font color="#00aacc">
+<h1>CS-537: Introduction to Operating Systems</h1> 
+</font> 
+</center> 
+
+<center>
+<b>University of Wisconsin, Madison</b> <br> 
+<b>Department of Computer Sciences</b> <br> 
+<b>Spring 2014</b> 
+</center> 
+
+<table>
+<tbody><tr>
+<td>
+<p></p> 
+</td> 
+</tr> 
+<tr>
+<td width="350pt">
+
+<h2>Basic Information</h2> 
+
+<p><b>Instructor:</b> <br> 
+<font size="-1">
+<a href="http://www.cs.wisc.edu/%7Edsmyers">Dan Myers</a> (4378 CS) <br> 
+Lecture: T and Th @ 1:00-2:15 in 1221 CS <br> 
+Discuss: Th @ 2:30-3:45 in 168 Noland <br>
+Office Hours: M @ 1-2 and F @ 10-11
+</font> </p> 
+
+<p><b>TA:</b> <br> 
+<font size="-1">Brandon Davis (1306 CS) <br>
+Office Hours: T @ 3-4 and Th @ 9:30-10:30
+</font> </p> 
+
+<h2>Read These</h2> 
+
+<p>
+<a href="http://pages.cs.wisc.edu/%7Edsmyers/cs537/overview.html">Overview</a> <!--- <a href=grades.html>Grades</a> - <a href=Discussion/discuss.html>Discussion</a> --><br> 
+<a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/Homework/homework.html">Homework</a> - <a href="http://pages.cs.wisc.edu/%7Edsmyers/cs537/handouts.html">Handouts</a> - <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/">Book</a> 
+</p> 
+
+<h2>Class News</h2> 
+<p> <b> 4/10: </b><a href="http://pages.cs.wisc.edu/%7Edsmyers/cs537/Projects/p4.html">Project 4</a> is posted.
+</p><p> <b> 3/24: </b><a href="http://pages.cs.wisc.edu/%7Edsmyers/cs537/Projects/p3.html">Project 3</a> is posted.
+</p><p> <b> 3/6: </b> <a href="http://pages.cs.wisc.edu/%7Eremzi/Classes/537/Fall2013/OldExams">Old 
+exams</a> are available.
+</p><p> <b> 3/6: </b> Handouts from the lectures on concurrency have been 
+posted.
+</p><p> <b> 2/27:</b>  Links to the homework simulators (useful for exam review) are linked above under <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/Homework/homework.html">Homework</a>.
+
+</p></td> 
+
+<td width="20pt"></td> 
+
+<td width="700pt">
+
+<center>
+<table>
+<tbody><tr>
+<td bgcolor="#f88017"><b>1/20</b> </td> 
+<td bgcolor="#f88017"><b>1/21</b> <font color="black">Intro <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/preface.pdf"><font color="black">pre </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/dialogue-foureasy.pdf"><font color="black">1 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/intro.pdf"><font color="black">2 </font></a><font color="black"> </font></font></font></sup><font color="black"><font color="black"><font color="black"> </font></font></font></font></td> 
+<td bgcolor="#f88017"><b>1/22</b> <a href="http://pages.cs.wisc.edu/%7Edsmyers/cs537/Projects/p1.html"><font color="black">P1 </font></a><font color="black"> </font></td> 
+<td bgcolor="#f88017"><b>1/23</b> <font color="black">Processes <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/dialogue-virtualization.pdf"><font color="black">d </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/cpu-intro.pdf"><font color="black">4 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/cpu-api.pdf"><font color="black">5 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/cpu-mechanisms.pdf"><font color="black">6 </font></a><font color="black"> </font></font></font></font></sup><font color="black"><font color="black"><font color="black"> </font></font></font></font></td> 
+<td bgcolor="#f88017"><b>1/24</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#f88017"><b>1/27</b> </td> 
+<td bgcolor="#f88017"><b>1/28</b> <font color="black">Sched <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/cpu-sched.pdf"><font color="black">7 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/cpu-sched-mlfq.pdf"><font color="black">8 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/cpu-dialogue.pdf"><font color="black">d </font></a><font color="black"> &nbsp;</font></font></font></sup><font color="black"><font color="black"><font color="black"> 
+</font></font></font></font></td><td bgcolor="#f88017"><b>1/29</b> </td> 
+<td bgcolor="aa0000"><b>1/30</b>NO CLASS </td> 
+<td bgcolor="#f88017"><b>1/31</b> </td> 
+ 
+
+</tr><tr>
+<td bgcolor="#f88017"><b>2/03</b> <!--<a href=Projects/p1.html><font color=black>P1:Due </a> </td> -->
+</td><td bgcolor="#f88017"><b>2/04</b> <font color="black">Mem Mgmt <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/vm-intro.pdf"><font color="black">12 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/vm-mechanism.pdf"><font color="black">14 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/vm-segmentation.pdf"><font color="black">15 </font></a><font color="black"> </font></font></font></sup><font color="black"><font color="black"><font color="black"> </font></font></font></font></td> 
+<td bgcolor="#f88017"><b>2/05</b> P1 due,  <a href="http://pages.cs.wisc.edu/%7Edsmyers/cs537/Projects/p2.html"><font color="black">P2 out</font></a><font color="black"> </font></td> 
+<td bgcolor="#f88017"><b>2/06</b> <font color="black">Paging <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/vm-paging.pdf"><font color="black">17 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#f88017"><b>2/07</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#f88017"><b>2/10</b> </td> 
+<td bgcolor="#f88017"><b>2/11</b> <font color="black">Paging: TLBs <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/vm-tlbs.pdf"><font color="black">18 </font></a><font color="black"> </font></sup><font color="black">  </font></font></td> 
+<td bgcolor="#f88017"><b>2/12</b> </td> 
+<td bgcolor="#f88017"><b>2/13</b> <font color="black">Paging: Smaller <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/vm-smalltables.pdf"><font color="black">19 </font></a><font color="black"> </font></sup><font color="black">  </font></font></td> 
+<td bgcolor="#f88017"><b>2/14</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#f88017"><b>2/17</b> </td> 
+<td bgcolor="#f88017"><b>2/18</b> <font color="black">Beyond Physical <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/vm-beyondphys.pdf"><font color="black">20 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/vm-beyondphys-policy.pdf"><font color="black">21 </font></a><font color="black"> </font></font></sup><font color="black"><font color="black">  </font></font></font></td> 
+<td bgcolor="#f88017"><b>2/19</b>
+</td><td bgcolor="#f88017"><b>2/20</b> <font color="black">Slack  </font></td> 
+<td bgcolor="#f88017"><b>2/21</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#3EA99F"><b>2/24</b> P2 due  </td>
+<td bgcolor="#3EA99F"><b>2/25</b><font color="black">Threads <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/dialogue-concurrency.pdf"><font color="black">24 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/threads-intro.pdf"><font color="black">25 </font></a><font color="black"> </font></font></sup><font color="black"><font color="black">  </font></font></font></td> 
+<td bgcolor="#3EA99F"><b>2/26</b> </td> 
+<td bgcolor="#3EA99F"><b>2/27</b> <font color="black">Locks <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/threads-locks.pdf"><font color="black">27 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#3EA99F"><b>2/28</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#3EA99F"><b>3/03</b> </td> 
+<td bgcolor="#3EA99F"><b>3/04</b> <font color="black">CVs <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/threads-cv.pdf"><font color="black">29 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#3EA99F"><b>3/05</b> </td> 
+<td bgcolor="#3EA99F"><b>3/06</b> <font color="black">Semaphores <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/threads-sema.pdf"><font color="black">30 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#3EA99F"><b>3/07</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#3EA99F"><b>3/10</b> </td> 
+<td bgcolor="#3EA99F"><b>3/11</b> <font color="black">Bugs <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/threads-bugs.pdf"><font color="black">31 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#3EA99F"><b>3/12</b> </td> 
+<td bgcolor="#aa0000"><b>3/13</b> <font color="black">MIDTERM EXAM</font></td> 
+<td bgcolor="#3EA99F"><b>3/14</b>
+</td></tr> 
+
+<tr>
+<td bgcolor="#aa0000"><b>3/17</b>  </td> 
+<td bgcolor="#aa0000"><b>3/18</b> SPRING </td> 
+<td bgcolor="#aa0000"><b>3/19</b>  </td> 
+<td bgcolor="#aa0000"><b>3/20</b> BREAK </td>
+<td bgcolor="#aa0000"><b>3/21</b>  </td>
+</tr> 
+
+
+<tr>
+<td bgcolor="#4CC417"><b>3/24</b> <a href="http://pages.cs.wisc.edu/%7Edsmyers/cs537/Projects/p3.html"><font color="black">P3 </font></a><font color="black"> </font></td> 
+<td bgcolor="#4CC417"><b>3/25</b> <font color="black">I/O and Disks <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/dialogue-file.pdf"><font color="black">d </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/file-devices.pdf"><font color="black">35 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/file-disks.pdf"><font color="black">36 </font></a><font color="black"> </font></font></font></sup><font color="black"><font color="black"><font color="black"> </font></font></font></font></td> 
+<td bgcolor="#4CC417"><b>3/26</b> </td> 
+<td bgcolor="#4CC417"><b>3/27</b> <font color="black">RAID <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/file-raid.pdf"><font color="black">37 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#4CC417"><b>3/28</b>
+</td></tr> 
+
+<tr>
+<td bgcolor="#4CC417"><b>3/31</b> </td> 
+<td bgcolor="#4CC417"><b>4/01</b> <font color="black">File Systems <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/file-intro.pdf"><font color="black">38 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#4CC417"><b>4/02</b> </td> 
+<td bgcolor="#4CC417"><b>4/03</b> <font color="black">FS Impl <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/file-implementation.pdf"><font color="black">39 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#4CC417"><b>4/04</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#4CC417"><b>4/07</b> </td> 
+<td bgcolor="#4CC417"><b>4/08</b> <font color="black">FFS <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/file-ffs.pdf"><font color="black">40 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#4CC417"><b>4/09</b> P3 due  <a href="http://pages.cs.wisc.edu/%7Edsmyers/cs537/Projects/p4.html"><font color="black">P4 </font></a><font color="black">  </font></td> 
+<td bgcolor="#4CC417"><b>4/10</b> <font color="black">Journaling <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/file-journaling.pdf"><font color="black">41 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#4CC417"><b>4/11</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#4CC417"><b>4/14</b>
+</td><td bgcolor="#4CC417"><b>4/15</b> <font color="black">LFS <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/file-lfs.pdf"><font color="black">42 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td> 
+<td bgcolor="#4CC417"><b>4/16</b> </td> 
+<td bgcolor="#E9AB17"><b>4/17</b> <font color="black">DistSys <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/dialogue-distribution.pdf"><font color="black">45 </font></a><font color="black"> &nbsp; <a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/dist-intro.pdf"><font color="black">46 </font></a><font color="black"> </font></font></sup><font color="black"><font color="black"> </font></font></font></td> 
+<td bgcolor="#E9AB17"><b>4/18</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#E9AB17"><b>4/21</b> </td> 
+<td bgcolor="#E9AB17"><b>4/22</b> <font color="black">NFS <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/dist-nfs.pdf"><font color="black">47 </font></a><font color="black"> </font></sup><font color="black"> </font></font></td>
+<td bgcolor="#E9AB17"><b>4/23</b> </td>
+<td bgcolor="#E9AB17"><b>4/24</b> <font color="black">AFS <sup><a href="http://www.cs.wisc.edu/%7Eremzi/OSTEP/dist-afs.pdf"><font color="black">48 </font></a><font color="black"> </font></sup><font color="black">  P4 Due </font></font></td> 
+<td bgcolor="#E9AB17"><b>4/25</b>  </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#F9966B"><b>4/28</b> </td> 
+<td bgcolor="#F9966B"><b>4/29</b> <font color="black"> Advanced </font></td> 
+<td bgcolor="#F9966B"><b>4/30</b> </td> 
+<td bgcolor="#F9966B"><b>5/01</b> <font color="black"> Topics </font></td> 
+<td bgcolor="#F9966B"><b>5/02</b> </td> 
+</tr> 
+
+<tr>
+<td bgcolor="#F9966B"><b>5/05</b> </td> 
+<td bgcolor="#F9966B"><b>5/06</b> <font color="black">Advanced </font></td> 
+<td bgcolor="#F9966B"><b>5/07</b> </td> 
+<td bgcolor="#F9966B"><b>5/08</b> <font color="black">Topics </font></td> 
+<td bgcolor="#F9966B"><b>5/09</b>
+</td></tr> 
+
+
+ 
+</tbody></table> 
+
+
+</center> </td> </tr> 
+
+</tbody></table> </center>  
+
+
+
+
+
+
+
+
+
+</body></html>

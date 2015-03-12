@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+void testfunction() {
+
+  return NULL;
+
+
+}
+
+
+int main() {
+
+
+  printf("\n The address to main() is %p", main);
+  printf("\n The address to testfunction() is %p", testfunction);
+
+
+}

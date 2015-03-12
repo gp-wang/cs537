@@ -1,0 +1,270 @@
+starting build
+
+**********************************************************************
+
+Test build
+build project using make
+
+**********************************************************************
+Trying to clean project using make clean
+make clean
+make: *** No rule to make target `clean'.  Stop.
+Trying to build project using make
+make
+make: *** No targets specified and no makefile found.  Stop.
+Trying to build using gcc
+gcc -O -Wall -o fastsort fastsort.c -I/afs/cs.wisc.edu/u/b/d/bdavis/public/cs537/tests/1a
+
+
+test build PASSED
+ (build project using make)
+
+starting arg
+
+**********************************************************************
+
+Test arg
+bad arguments
+
+**********************************************************************
+/tmp/tmp_GU0JS/p/fastsort
+
+
+test arg PASSED
+ (bad arguments)
+
+starting arg2
+
+**********************************************************************
+
+Test arg2
+bad arguments
+
+**********************************************************************
+/tmp/tmp_GU0JS/p/fastsort a b c d
+
+
+test arg2 PASSED
+ (bad arguments)
+
+starting badin
+
+**********************************************************************
+
+Test badin
+bad input file
+
+**********************************************************************
+/tmp/tmp_GU0JS/p/fastsort -i /invalid/path/1V6JD8 -o outfile
+
+
+test badin PASSED
+ (bad input file)
+
+starting badout
+
+**********************************************************************
+
+Test badout
+bad output file
+
+**********************************************************************
+/tmp/tmp_GU0JS/p/fastsort -i /tmp/tmp_GU0JS/p/infile -o /invalid/path/1V6JD8
+
+
+test badout PASSED
+ (bad output file)
+
+starting empty
+
+**********************************************************************
+
+Test empty
+empty input file
+
+**********************************************************************
+Generating input file
+/u/b/d/bdavis/public/cs537/tests/1a/generate -s 0 -n 0 -o /tmp/tmp_GU0JS/p/infile
+Running fastsort
+/tmp/tmp_GU0JS/p/fastsort -i /tmp/tmp_GU0JS/p/infile -o /tmp/tmp_GU0JS/p/outfile
+Fastsort completed in 0.0015881061554 seconds
+Checking output
+
+
+test empty PASSED
+ (empty input file)
+
+starting one
+
+**********************************************************************
+
+Test one
+a single record
+
+**********************************************************************
+Generating input file
+/u/b/d/bdavis/public/cs537/tests/1a/generate -s 0 -n 1 -o /tmp/tmp_GU0JS/p/infile
+Running fastsort
+/tmp/tmp_GU0JS/p/fastsort -i /tmp/tmp_GU0JS/p/infile -o /tmp/tmp_GU0JS/p/outfile
+Fastsort completed in 0.00154995918274 seconds
+Checking output
+
+
+test one PASSED
+ (a single record)
+
+starting five1
+
+**********************************************************************
+
+Test five1
+five records
+
+**********************************************************************
+Generating input file
+/u/b/d/bdavis/public/cs537/tests/1a/generate -s 1 -n 5 -o /tmp/tmp_GU0JS/p/infile
+Running fastsort
+/tmp/tmp_GU0JS/p/fastsort -i /tmp/tmp_GU0JS/p/infile -o /tmp/tmp_GU0JS/p/outfile
+Fastsort completed in 0.00158405303955 seconds
+Checking output
+
+
+test five1 PASSED
+ (five records)
+
+starting five2
+
+**********************************************************************
+
+Test five2
+five records
+
+**********************************************************************
+Generating input file
+/u/b/d/bdavis/public/cs537/tests/1a/generate -s 2 -n 5 -o /tmp/tmp_GU0JS/p/infile
+Running fastsort
+/tmp/tmp_GU0JS/p/fastsort -i /tmp/tmp_GU0JS/p/infile -o /tmp/tmp_GU0JS/p/outfile
+Fastsort completed in 0.00164604187012 seconds
+Checking output
+
+
+test five2 PASSED
+ (five records)
+
+starting medium
+
+**********************************************************************
+
+Test medium
+100 records
+
+**********************************************************************
+Generating input file
+/u/b/d/bdavis/public/cs537/tests/1a/generate -s 3 -n 100 -o /tmp/tmp_GU0JS/p/infile
+Running fastsort
+/tmp/tmp_GU0JS/p/fastsort -i /tmp/tmp_GU0JS/p/infile -o /tmp/tmp_GU0JS/p/outfile
+Fastsort completed in 0.00190210342407 seconds
+Checking output
+
+
+test medium PASSED
+ (100 records)
+
+starting large
+
+**********************************************************************
+
+Test large
+10k records
+
+**********************************************************************
+Generating input file
+/u/b/d/bdavis/public/cs537/tests/1a/generate -s 4 -n 10000 -o /tmp/tmp_GU0JS/p/infile
+Running fastsort
+/tmp/tmp_GU0JS/p/fastsort -i /tmp/tmp_GU0JS/p/infile -o /tmp/tmp_GU0JS/p/outfile
+Fastsort completed in 0.00865411758423 seconds
+Checking output
+
+
+test large PASSED
+ (10k records)
+
+starting verylarge
+
+**********************************************************************
+
+Test verylarge
+100k records
+
+**********************************************************************
+Generating input file
+/u/b/d/bdavis/public/cs537/tests/1a/generate -s 5 -n 100000 -o /tmp/tmp_GU0JS/p/infile
+Running fastsort
+/tmp/tmp_GU0JS/p/fastsort -i /tmp/tmp_GU0JS/p/infile -o /tmp/tmp_GU0JS/p/outfile
+Fastsort completed in 0.0883870124817 seconds
+Checking output
+
+
+test verylarge PASSED
+ (100k records)
+
+starting dup
+
+**********************************************************************
+
+Test dup
+duplicate records
+
+**********************************************************************
+Running fastsort
+/tmp/tmp_GU0JS/p/fastsort -i /u/b/d/bdavis/public/cs537/tests/1a/dupdata -o /tmp/tmp_GU0JS/p/outfile
+Fastsort completed in 0.00216102600098 seconds
+Checking output
+
+
+test dup PASSED
+ (duplicate records)
+
+**********************************************************************
+Summary:
+test build PASSED
+ (build project using make)
+
+test arg PASSED
+ (bad arguments)
+
+test arg2 PASSED
+ (bad arguments)
+
+test badin PASSED
+ (bad input file)
+
+test badout PASSED
+ (bad output file)
+
+test empty PASSED
+ (empty input file)
+
+test one PASSED
+ (a single record)
+
+test five1 PASSED
+ (five records)
+
+test five2 PASSED
+ (five records)
+
+test medium PASSED
+ (100 records)
+
+test large PASSED
+ (10k records)
+
+test verylarge PASSED
+ (100k records)
+
+test dup PASSED
+ (duplicate records)
+
+Passed 13 of 13 tests.
+Overall 13 of 13
