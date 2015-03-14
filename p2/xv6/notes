@@ -1,0 +1,7 @@
+=>(02/22)
+successfully tested getpinfo using usertests.c
+
+
+todo: implement MLFQ in scheduler,
+      implement lottery
+      implement rand

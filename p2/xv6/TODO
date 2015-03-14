@@ -1,0 +1,68 @@
+=> 02/22:
+
+proc.c: modified the low queue execution flow. run the low queue tasks using a alternation bit (i) for two time slices each proc.
+newest version xv6_rev5
+
+=> 02/22:
+test result 3: cpu panic error
+ltick ratio error
+(maybe MLFQ no need S here. Just release cpu after 2nd low priority run?)
+
+=> 02/20:
+
+trying to implement MLFQ with RR on high and low queue
+       currently thinking of ways to RR within a given queue inside the scheduler's innerloop
+
+temprarily disabled the two sys calls
+
+lottery not implemented yet.
+
+=>02/19
+pstat:
+
+info: cs537 p2 page
+recording: 3:00
+
+question: shall I write the pstat.h (I cant find it anywhere in existing xv6 code)
+or I just fill it
+
+since pstat.h is a new file added by me, do I need to add this file name to include somewhere
+
+//usage (guessed):
+//question: how does one process call some system call? fork()?
+answer: seems just use the variable name "proc" in the implementation of system call to refer to the calling process, e.g. see code of fork() and exit()
+
+// where is the ticket information stored? how to change them?
+
+
+=> I remembered that lecturer mentioned to add content in struct proc to store information of queue priority and tickets
+
+now I see similar info in another struct pstat, shall I store the queue priority info and tickets info here instead?
+
+answer: I believe should be struct proc, instad of pstat to store info for queue priority and tickets
+
+the struct pstat, I suspect it is just for statistics of all processes ,
+and to be used in sysgetpinfo, which I guess is to list all proc's info
+(lecturer hinted us to write a xv6 program to test it, we can use the ps program as the source to start with.)
+
+
+=> the scheduler changes process state between RUNNABLE and RUNNING
+
+
+=>
+1. take information from process table
+2. fill that into pstat structur
+3. use system call getpinfo to return information about all processes
+
+Lecturer:
+You'll need to understand how to fill in the structure pstat in the kernel and pass the results to user space.
+Me:
+What is the kernel proc here? I guess is scheduler
+What is the user space here?????
+"pass the results to user space": I think he means using system call getpinfo to provide this info to user programs (see xv6 book pg 7 last paragraph).
+
+So, I need to maintain a global struct pstat variable to hold the info passed from scheduler.
+
+
+
+=> 

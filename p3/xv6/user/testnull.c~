@@ -1,0 +1,7 @@
+#include "user.h"
+
+int main() {
+  printf("test",0);
+
+}
+
