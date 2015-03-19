@@ -1,10 +1,6 @@
-/////////////////////////////////////////////////
-//File Name:		README
-//File Description:	Describing what the author did for project 1
-//Author:		Gaopeng Wang
-//Campus ID:		907 000 0444
-//Date:			02/05/2014
-/////////////////////////////////////////////////
+linux: fastsort
+xv6: setup kernel hacking env, and impl getsysinfo()
+
 
 Project 1a:
 1) Work done:
