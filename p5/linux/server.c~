@@ -1,5 +1,3 @@
-/* gw: this version actuallly works I think it is woking fine */
-/* it seems there is one more error about the dir stat/ or big dir I could not be sure about i t */
 /* gw: maybe need to load all imap piece into mem? */
 #include <string.h>
 #include <stdio.h>

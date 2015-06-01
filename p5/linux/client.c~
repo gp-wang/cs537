@@ -11,28 +11,18 @@ main(int argc, char *argv[])
 	printf("Sizes %u %u %u\n", (unsigned int)sizeof(MFS_CR_t), (unsigned int)sizeof(MFS_Imap_t), (unsigned int)sizeof(MFS_Inode_t));
 
 	MFS_Init("localhost", 3004);
-	int rc = -1;
-	//	rc = MFS_Creat(0, MFS_DIRECTORY, "testdir");
 
 	int i = 0;
-	for(i=0; i<1; i++) {
+	for(i=0; i<8192; i++) {
 	  int aInt = i;
 	  char str[15];
 	  sprintf(str, "%d", aInt);
 	  //	  int rc = MFS_Creat(0, MFS_REGULAR_FILE, str);
-	  rc = MFS_Creat(0, MFS_DIRECTORY, str);
+	  int rc = MFS_Creat(0, MFS_DIRECTORY, str);
 	  if(rc < 0){
 	    printf("Failed at Creat 0_%d\n",i);
 	    exit(0);
 	  }
-	  /* rc = MFS_Lookup(0, str); */
-	  /* assert(rc == 1); */
-
-	  rc = MFS_Lookup(1, ".");
-	  printf("\n Under created dir, \".\"'s inum is: %d", rc);
-	  rc = MFS_Lookup(1, "..");
-	  printf("\n Under created dir, \"..\"'s inum is: %d", rc);
-
 	  //	  printf("Passed Creat 0_%d\n", i);
 	  //	  char str1[15];
 	  int inum = MFS_Lookup(0, str);
@@ -44,7 +34,7 @@ main(int argc, char *argv[])
 	}
 
 
-	rc = MFS_Creat(0, MFS_REGULAR_FILE, "test");
+	int rc = MFS_Creat(0, MFS_REGULAR_FILE, "test");
 	if(rc < 0){
 		printf("Failed at Creat 1\n");
 		exit(0);
